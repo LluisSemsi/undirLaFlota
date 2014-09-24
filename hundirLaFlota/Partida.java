@@ -68,7 +68,6 @@ public class Partida {
     		if(barco.getTocadas() < barco.getTamanyo()){
     			barco.tocaBarco();
     			if(barco.getTocadas() == barco.getTamanyo()){
-    				//Agarrar el barco, la seua posicio inicial, fer el bucle, marcalos a -3 i tornar la id
     				tamBarco = barco.getTamanyo();
     				filaInicial = barco.getFilaInicial();
     				colInicial = barco.getColumnaInicial();
@@ -81,7 +80,8 @@ public class Partida {
     				}
     				else{
     					for(int i=0 ; i<tamBarco ; i++){
-    						
+    						mar[filaInicial+i][colInicial] = HUNDIDO;
+   						
     					}
     				}
     				

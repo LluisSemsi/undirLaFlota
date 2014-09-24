@@ -2,6 +2,7 @@ package tablero;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,21 +42,33 @@ public class Juego {
 	 * Lanza una nueva hebra que establece los atributos del juego y dibuja la interfaz grafica: tablero
 	 */
 	private void ejecuta() {
-        // POR IMPLEMENTAR
-	} // end ejecuta
+		this.numFilas = NUMFILAS;
+		this.numColumnas = NUMCOLUMNAS;
+		this.numBarcos = NUMBARCOS;
+		this.quedan = NUMBARCOS;
+		this.disparos = 0;
+		this.partida = new Partida(numFilas,numColumnas,numBarcos);
+		this.frame = new JFrame("Hudir la Flota");
+		this.buttons = new JButton[numFilas][numColumnas];
+		this.estado = new JLabel();
+		dibujaTablero();
+	} 
 	
 	/**
 	 * Dibuja el tablero de juego y crea la partida inicial
 	 */
 	private void dibujaTablero() {
-        // POR IMPLEMENTAR
-	} // end dibujaTablero
+		frame.setLayout(new BorderLayout());
+		frame.setVisible(true);
+        
+	} 
 	
 	/**
 	 * Anyade el menu de opciones del juego
 	 */
 	private void anyadeMenu() {
-        // POR IMPLEMENTAR
+		
+        
 	} // end anyadeMenu
 
 	/**
@@ -65,7 +78,9 @@ public class Juego {
 	 * @param nc	numero de columnas
 	 */
 	private void anyadeGrid(int nf, int nc) {
-        // POR IMPLEMENTAR		
+		Container contenedor = frame.getContentPane();
+		contenedor.setLayout(new GridLayout(9, 10));
+		contenedor.		
 	} // end anyadeGrid
 	
 
