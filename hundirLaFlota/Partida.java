@@ -81,7 +81,7 @@ public class Partida {
     				}
     				else{
     					for(int i=0 ; i<tamBarco ; i++){
-    						mar[filaInicial+i][colInicial] = HUNDIDO;
+    						
     					}
     				}
     				
